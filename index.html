@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>dojo learning</title>
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css" />
+    <script>
+        var dojoConfig = {
+            async: true
+            , packages: [{
+                name: "app"
+                , location: '/app'
+            }]
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+
+   
+</head>
+
+<body class="claro">
+        <select id="departureSelect" placeHolder="Colombo - Bandaranaike International Airport (Sri Lanka) - CMB"></select>
+        <select id="destinationSelect"></select>
+        <input type="date" id="departureDate" name="departureDate" />
+        <input type="date" id="returnDate" name="returnDate" />
+        <input type="number" id="adults" name="adults" placeholder="1" />
+        <input type="number" id="kids" name="kids" placeholder="0" />
+        <input type="email" id="email" name="email" placeholder="name@example.com"/>
+        <input type="tel" id="phone" name="phone" maxlength="16" placeholder="0771234567"/>
+        <input type="submit" id="submitBooking" name="submitBooking" value="submit" />
+    </br>
+    <label id="errormsg" name="errormsg"/>
+    
+     <script>
+        require([
+        'app/combofill',
+        'app/bookingvalidator']);
+    </script>
+</body>
+
+</html>
